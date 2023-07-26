@@ -1,20 +1,22 @@
-<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&center=true&vCenter=true&width=435&lines=%E9%B1%BC%E5%A4%B4%E7%A5%9D%E6%82%A8%E4%BB%8A%E5%A4%A9%E6%8B%A5%E6%9C%89%E4%B8%80%E5%A4%A9%E7%9A%84%E5%A5%BD%E5%BF%83%E6%83%85!" alt="Typing SVG" /></a>
+<a href="https://git.io/typing-svg"><img  src="https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&vCenter=true&width=435&lines=%E9%B1%BC%E5%A4%B4%E7%A5%9D%E6%82%A8%E4%BB%8A%E5%A4%A9%E6%8B%A5%E6%9C%89%E4%B8%80%E5%A4%A9%E7%9A%84%E5%A5%BD%E5%BF%83%E6%83%85!"  alt="Typing SVG" /></a>
 
 
 
-# 初衷
+# 1. 初衷
 
 在自己学习并做笔记的同时，希望自己的笔记也能够帮助刚入门的新人！！！！！同时还有好多文章是用word写的，暂时还未转换成md，后续会持续更新。
 
-# 免责声明
+
+
+# 2. 免责声明
 
 本项目所涉及的技术、思路和工具仅供学习，任何人不得将其用于非法用途和盈利，不得将其用于非授权渗透测试，否则后果自行承担，与本项目无关。
 
-# 项目导航
+# 3. 项目导航
 
 由于这个文章的顺序我实在是懒得调整了，如果文章的顺序不对的还请自行查找，这里只大概将每个目录中存在哪些文件列举出来。
 
-## APP渗透
+## 3.1. APP渗透
 
 - APP渗透—APP与小程序信息收集.md
 
@@ -27,7 +29,7 @@
 - APP渗透—查脱壳、反编译、重打包签名.md
 
 
-## WEB安全基础
+## 3.2. WEB安全基础
 
 - CSRF及SSRF详解.md
 
@@ -49,7 +51,7 @@
 
 
 
-## Windows&Linux权限提升
+## 3.3. Windows&Linux权限提升
 
 - Linux权限提升—内核、SUID、脏牛等提权.md
 
@@ -66,7 +68,7 @@
 - Windows权限提升—溢出提权.md
 
 
-## 内网渗透&横向移动
+## 3.4. 内网渗透&横向移动
 
 - VM虚拟机端口映射接收CS弹反木马.md
 - 内网横向移动—Exchange 服务&有账户 CVE 漏洞&无账户口令爆破.md
@@ -83,14 +85,14 @@
 - 内网渗透—隧道搭建&Ngrok与Frp内网穿透.md
 - 内网渗透—隧道搭建&SPP与NPS内网穿透.md
 
-## 渗透工具介绍与使用
+## 3.5. 渗透工具介绍与使用
 
 - Cobalt Strike简介与下载.md
 - Netcat工具安装与使用.md
 - ubuntu20.04部署Nessus_pro2023年6月30日版本.md
 - xray工具—代理扫描、爬虫扫描、Burp联动.md
 
-# 更新日志
+# 4. 更新日志
 
 - 最近更新时间：23年7月26日10点13分
 

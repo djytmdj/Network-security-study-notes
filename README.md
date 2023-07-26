@@ -87,14 +87,24 @@
 
 ## 3.5. 渗透工具介绍与使用
 
+- AWVS安装与操作.md
+- CentOS7安装msf工具.md
 - Cobalt Strike简介与下载.md
+- Goby安装与使用.md
+- Godzilla工具.md
+- Metasploit工具使用(上).md
+- Metasploit工具使用(下).md
 - Netcat工具安装与使用.md
+- Nmap工具使用.md
+- burpsuite.md
+- burpsuite安装HTTPS证书.md
+- hydra工具使用.md
 - ubuntu20.04部署Nessus_pro2023年6月30日版本.md
 - xray工具—代理扫描、爬虫扫描、Burp联动.md
 
 # 4. 更新日志
 
-- 最近更新时间：23年7月26日10点13分
+- 最近更新时间：23年7月26日11点09分
 
 - 最近更新内容：渗透工具介绍与使用
 

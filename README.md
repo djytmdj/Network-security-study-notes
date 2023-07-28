@@ -75,6 +75,7 @@
 
 ## 3.5. 内网渗透&横向移动
 
+- MSF&CS互相联动.md
 - VM虚拟机端口映射接收CS弹反木马.md
 - 内网横向移动—Exchange 服务&有账户 CVE 漏洞&无账户口令爆破.md
 - 内网横向移动—IPC&AT&schtasks.md

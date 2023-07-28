@@ -1,6 +1,6 @@
 <a href="https://git.io/typing-svg"><img  src="https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&vCenter=true&width=435&lines=%E9%B1%BC%E5%A4%B4%E7%A5%9D%E6%82%A8%E4%BB%8A%E5%A4%A9%E6%8B%A5%E6%9C%89%E4%B8%80%E5%A4%A9%E7%9A%84%E5%A5%BD%E5%BF%83%E6%83%85!"  alt="Typing SVG" /></a>
 
-
+![](https://komarev.com/ghpvc/?username=djytmdj)
 
 # 1. 初衷
 

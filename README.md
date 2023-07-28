@@ -115,10 +115,10 @@
 
 # 4. 更新日志
 
-- 最近更新时间：23年7月26日12点25分
+- 最近更新时间：23年7月28日09点31分
 
-- 最近更新内容：中间件漏洞
+- 最近更新内容：内网渗透&横向移动
 
-- 上次更新内容：安全加固
+- 上次更新内容：中间件漏洞
 
 <a href="https://info.flagcounter.com/9CiE"><img src="https://s01.flagcounter.com/count2/9CiE/bg_FFFFFF/txt_000000/border_CCCCCC/columns_2/maxflags_10/viewers_3/labels_0/pageviews_0/flags_0/percent_0/" alt="Flag Counter" border="0"></a>

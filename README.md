@@ -83,6 +83,7 @@
 - 内网横向移动—NTLM-Relay重放&Responder中继攻击&Ldap&Ews.md
 - 内网横向移动—PTH哈希&PTT票据&PTK密匙&Kerberos.md
 - 内网横线移动—Wmi&Smb&CrackMapExec&ProxyChains&Impacket.md
+- 内网横向移动—资源约束委派.md
 - 内网横向移动—非约束委派&约束委派.md
 - 内网渗透—Linux上线.md
 - 内网渗透—代理Socks协议、路由不出网、SMB绕过、CS-MSF控制上线.md

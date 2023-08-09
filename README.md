@@ -3,7 +3,8 @@
 ![Visitor Count](https://profile-counter.glitch.me/djytmdj/count.svg)
 
 # 0.前言
-欢迎关注我的公众号，内容均会同步发送。
+欢迎关注我的公众号，内容均会同步发布，正常一周一至两篇文章，不发划水内容。
+![image](https://github.com/djytmdj/Network-security-study-notes/blob/main/WEB%E5%AE%89%E5%85%A8%E5%9F%BA%E7%A1%80/assets/gzh.png)
 
 # 1. 初衷
 

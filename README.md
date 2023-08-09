@@ -87,6 +87,7 @@
 - 内网横向移动—Kerberos攻击&SPN扫描&WinRM&WinRS&RDP.md
 - 内网横向移动—NTLM-Relay重放&Responder中继攻击&Ldap&Ews.md
 - 内网横向移动—PTH哈希&PTT票据&PTK密匙&Kerberos.md
+- 内网横向移动—Win&Linux&内存离线读取&Hashcat破解&RDP&SSH存储提取.md
 - 内网横线移动—Wmi&Smb&CrackMapExec&ProxyChains&Impacket.md
 - 内网横向移动—资源约束委派.md
 - 内网横向移动—非约束委派&约束委派.md
@@ -123,7 +124,7 @@
 
 # 4. 更新日志
 
-- 最近更新时间：23年8月7日20点00分
+- 最近更新时间：23年8月9日21点51分
 
 - 最近更新内容：内网渗透&横向移动
 

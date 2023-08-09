@@ -2,6 +2,9 @@
 
 ![Visitor Count](https://profile-counter.glitch.me/djytmdj/count.svg)
 
+# 0.前言
+欢迎关注我的公众号，内容均会同步发送。
+
 # 1. 初衷
 
 在自己学习并做笔记的同时，希望自己的笔记也能够帮助刚入门的新人！！！！！同时还有好多文章是用word写的，暂时还未转换成md，后续会持续更新。

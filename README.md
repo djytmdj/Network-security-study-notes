@@ -111,6 +111,7 @@
 ## 3.7. 权限维持
 
 - windows权限维持—SSP&HOOK&DSRM&SIDhistory&SkeletonKey.md
+- windows权限维持—黄金白银票据&隐藏用户&远控&RustDesk&GotoHttp.md
 
 ## 3.8. 渗透工具介绍与使用
 

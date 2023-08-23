@@ -111,6 +111,7 @@
 ## 3.7. 权限维持
 
 - Linux权限维持—OpenSSH&PAM后门&SSH软连接&公私钥登录.md
+- Linux权限维持—Strace监控&Alias别名&Cron定时任务
 - Windows权限维持—自启动&映像劫持&粘滞键&辅助屏保后门&WinLogon.md
 - windows权限维持—SSP&HOOK&DSRM&SIDhistory&SkeletonKey.md
 - windows权限维持—黄金白银票据&隐藏用户&远控&RustDesk&GotoHttp.md
@@ -134,7 +135,7 @@
 
 # 4. 更新日志
 
-- 最近更新时间：23年8月22日13点25分
+- 最近更新时间：23年8月23日15点01分
 
 - 最近更新内容：权限维持
 

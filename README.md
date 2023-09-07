@@ -129,6 +129,7 @@
 - Metasploit工具使用(下).md
 - Netcat工具安装与使用.md
 - Nmap工具使用.md
+- VMware虚拟机安装运行MacOS系统.md
 - burpsuite.md
 - burpsuite安装HTTPS证书.md
 - hydra工具使用.md
@@ -137,9 +138,9 @@
 
 # 4. 更新日志
 
-- 最近更新时间：23年8月30日12点59分
+- 最近更新时间：23年9月7日18点43分
 
-- 最近更新内容：URL重定向漏洞.md
+- 最近更新内容：VMware虚拟机安装运行MacOS系统.md
 
-- 上次更新内容：Linux权限维持—Strace监控&Alias别名&Cron定时任务
+- 上次更新内容：URL重定向漏洞.md
 

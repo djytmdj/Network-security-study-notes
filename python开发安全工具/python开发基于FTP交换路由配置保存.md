@@ -32,7 +32,7 @@ import time
 import signal
 import logging
 import argparse
-from ftplib import FTP, error_temp
+from ftplib import FTP, error_temp, error_perm
 import pandas as pd
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from colorama import init, Fore, Style
@@ -49,18 +49,41 @@ logging.basicConfig(filename='download_errors.log', level=logging.ERROR,
 lock = threading.Lock()
 
 
+# 定义一个函数来验证文件是否成功下载
+def is_file_downloaded(local_filename, expected_size=None):
+    if os.path.exists(local_filename):
+        file_size = os.path.getsize(local_filename)
+        if expected_size:
+            return file_size >= expected_size
+        else:
+            return file_size > 0
+    return False
+
+
 # 定义下载文件函数
 def download_file(ftp, filename, local_filename):
-    with open(local_filename, 'wb') as local_file:
-        ftp.retrbinary(f'RETR {filename}', local_file.write)
-        # 获取相对于当前工作目录的相对路径
-        relative_path = os.path.relpath(local_filename, os.getcwd())
-        with lock:
-            print(Fore.GREEN + f'{filename} 已下载为 {relative_path}')  # 下载成功时显示绿色
+    try:
+        with open(local_filename, 'wb') as local_file:
+            ftp.retrbinary(f'RETR {filename}', local_file.write)
+
+        # 验证文件是否成功下载
+        if is_file_downloaded(local_filename):
+            relative_path = os.path.relpath(local_filename, os.getcwd())
+            with lock:
+                print(Fore.GREEN + f'{filename} 已下载为 {relative_path}')  # 下载成功时显示绿色
+        else:
+            raise Exception(f'{filename} 下载失败，文件大小为0')
+    except error_perm as e:
+        logging.error(f"FTP 权限错误，无法下载文件: {e}")
+        raise
+    except Exception as e:
+        logging.error(f"下载文件时出错: {e}")
+        raise
 
 
 # 定义下载华为配置函数
 def download_huawei_config(host, username, password, download_dir, timeout=30):
+    local_filename = os.path.join(download_dir, f'{host}_vrpcfg.zip')  # 在 try 块外定义
     try:
         ftp = FTP(host, timeout=timeout)  # 设置超时时间
         ftp.login(user=username, passwd=password)
@@ -68,7 +91,6 @@ def download_huawei_config(host, username, password, download_dir, timeout=30):
             print(Fore.YELLOW + f'连接华为设备: {host}')  # 连接设备时显示黄色
 
         # 下载文件到指定目录
-        local_filename = os.path.join(download_dir, f'{host}_vrpcfg.zip')
         download_file(ftp, 'vrpcfg.zip', local_filename)
 
         ftp.quit()
@@ -76,14 +98,23 @@ def download_huawei_config(host, username, password, download_dir, timeout=30):
         with lock:
             logging.error(f'下载华为配置时出错: {host} 连接超时或暂时不可用: {e}')
             print(Fore.RED + f"从 {host} 下载错误。查看日志了解更多详细信息。")  # 错误时显示红色
+    except ConnectionResetError as e:
+        if is_file_downloaded(local_filename):
+            # 忽略连接被强制关闭的错误，因为文件已成功下载
+            with lock:
+                print(Fore.CYAN + f"{host} 下载完成后连接被强制关闭，但文件已成功下载。")
+        else:
+            logging.error(f'下载华为配置时连接被强制关闭，且文件下载不完整: {host} 错误: {e}')
+            print(Fore.RED + f"从 {host} 下载错误。查看日志了解更多详细信息。")
     except Exception as e:
         with lock:
             logging.error(f'下载华为配置时出错: {host}: {e}')
             print(Fore.RED + f"从 {host} 下载错误。查看日志了解更多详细信息。")  # 错误时显示红色
 
 
-# 定义下载华三配置函数
+# 定义下载华三配置函数（与华为类似）
 def download_h3c_config(host, username, password, download_dir, timeout=30):
+    local_filename = os.path.join(download_dir, f'{host}_startup.cfg')  # 在 try 块外定义
     try:
         ftp = FTP(host, timeout=timeout)  # 设置超时时间
         ftp.login(user=username, passwd=password)
@@ -91,7 +122,6 @@ def download_h3c_config(host, username, password, download_dir, timeout=30):
             print(Fore.YELLOW + f'连接H3C设备: {host}')  # 连接设备时显示黄色
 
         # 下载文件到指定目录
-        local_filename = os.path.join(download_dir, f'{host}_startup.cfg')
         download_file(ftp, 'startup.cfg', local_filename)
 
         ftp.quit()
@@ -99,6 +129,13 @@ def download_h3c_config(host, username, password, download_dir, timeout=30):
         with lock:
             logging.error(f'下载H3C配置时出错: {host} 连接超时或暂时不可用: {e}')
             print(Fore.RED + f"从 {host} 下载错误。查看日志了解更多详细信息。")  # 错误时显示红色
+    except ConnectionResetError as e:
+        if is_file_downloaded(local_filename):
+            with lock:
+                print(Fore.CYAN + f"{host} 下载完成后连接被强制关闭，但文件已成功下载。")
+        else:
+            logging.error(f'下载H3C配置时连接被强制关闭，且文件下载不完整: {host} 错误: {e}')
+            print(Fore.RED + f"从 {host} 下载错误。查看日志了解更多详细信息。")
     except Exception as e:
         with lock:
             logging.error(f'下载H3C配置时出错: {host}: {e}')
@@ -195,6 +232,7 @@ if __name__ == '__main__':
 
     # 调用主函数
     main(args.excel_file, args.threads)
+
 
 ```
 
